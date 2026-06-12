@@ -6,8 +6,15 @@ class CustomInput extends StatelessWidget {
   final bool isPassword;
   final TextInputType keyboardType;
   final TextEditingController? controller;
-  
-  const CustomInput({super.key, required this.label, required this.icon, required this.isPassword, required this.keyboardType, this.controller});
+
+  const CustomInput({
+    super.key,
+    required this.label,
+    required this.icon,
+    this.isPassword = false,
+    this.keyboardType = TextInputType.text,
+    this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +28,10 @@ class CustomInput extends StatelessWidget {
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey.shade300)
+          borderSide: BorderSide(color: Colors.grey.shade300),
         ),
         filled: true,
-        fillColor: Colors.white
+        fillColor: Colors.white,
       ),
     );
   }
