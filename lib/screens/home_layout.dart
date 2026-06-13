@@ -48,6 +48,18 @@ class HomeLayout extends StatelessWidget {
               selected: navigationShell.currentIndex == 0,
               onTap: () => _onTabTapped(context, 0),
             ),
+            ListTile(
+              leading: const Icon(Icons.book_rounded),
+              title: const Text('Materias'),
+              selected: navigationShell.currentIndex == 1,
+              onTap: () => _onTabTapped(context, 1),
+            ),
+            ListTile(
+              leading: const Icon(Icons.assignment_turned_in_rounded),
+              title: const Text('Asignar Cursos'),
+              selected: navigationShell.currentIndex == 2,
+              onTap: () => _onTabTapped(context, 2),
+            ),
             const Divider(),
             const Spacer(),
             ListTile(

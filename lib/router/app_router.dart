@@ -26,6 +26,22 @@ final goRouter = GoRouter(
             ),
           ],
         ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: '/materias',
+              builder: (context, state) => const MateriasScreen(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: '/asignacion',
+              builder: (context, state) => const MateriasScreen(),
+            ),
+          ],
+        ),
       ],
     ),
   ],
